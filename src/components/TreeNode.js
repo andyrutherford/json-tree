@@ -15,7 +15,10 @@ const TreeNode = ({ json }) => {
           <img
             src={val}
             alt=''
-            style={{ height: '100px', width: '100px', objectFit: 'cover' }}
+            style={{
+              height: '125px',
+              width: 'auto',
+            }}
           />
         </li>
       );

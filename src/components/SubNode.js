@@ -5,7 +5,12 @@ const SubNode = ({ label, val }) => {
   const [expand, setExpand] = useState(true);
   return (
     <li key={label}>
-      <button onClick={() => setExpand(!expand)}>{label}</button>
+      <button
+        onClick={() => setExpand(!expand)}
+        style={{ fontSize: '1.25rem' }}
+      >
+        {label}
+      </button>
       {expand && <TreeNode json={val} />}
     </li>
   );

@@ -3,18 +3,22 @@
 }
 
 body {
+  font-family: sans-serif;
   padding: 0 10%;
 }
 
 form {
-  text-align: center;
-  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0 50px;
 }
 
 input {
   height: 40px;
+  font-size: 1.25rem;
 }
 
 input[type='string'] {
-  width: 300px;
+  width: 400px;
 }
