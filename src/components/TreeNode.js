@@ -6,11 +6,11 @@ import isImage from '../utils/isImage';
 const TreeNode = ({ json }) => {
   const renderItems = (key, val) => {
     if (val !== null && typeof val === 'object') {
-      return <SubNode label={key} val={val} />;
+      return <SubNode key={key} label={key} val={val} />;
     }
     if (isImage(val)) {
       return (
-        <li>
+        <li key={key}>
           {key}:{' '}
           <img
             src={val}

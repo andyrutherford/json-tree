@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import Form from './components/Form';
-import Tree from './components/Tree';
+import TreeNode from './components/TreeNode';
 
 const App = () => {
-  const [url, setUrl] = useState('');
   const [json, setJson] = useState({});
-
-  const urlHandler = (url) => {
-    setUrl(url);
-  };
 
   const jsonHandler = (json) => {
     setJson(json);
@@ -17,7 +12,11 @@ const App = () => {
   return (
     <div className='App'>
       <Form jsonHandler={jsonHandler} />
-      {json && <Tree json={json} />}
+      {json && (
+        <div className='tree'>
+          <TreeNode json={json} />
+        </div>
+      )}
     </div>
   );
 };
